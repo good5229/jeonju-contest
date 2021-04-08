@@ -54,4 +54,71 @@
 
 - 읍면동, 시군구, 시도 Geojson : http://www.gisdeveloper.co.kr/?p=2332
 - 시내버스 정보, 원룸 및 오피스텔 현황, 대규모점포현황 : 전주데이터포털
-- 
+
+----------------
+
+# 거주지 데이터
+
+- 다음과 같은 형태로 구성된 전주시내 원룸 및 오피스텔 현황을 다운받음
+    - 형태
+        - 건축연도가 '알수없음' 인 행은 모두 제거함
+        - 
+    - ![image-20210408211827804](Readme.assets/image-20210408211827804.png)
+    - 주요통계량
+    - ![image-20210408211853059](Readme.assets/image-20210408211853059.png)
+
+```python
+p = re.compile(r'\d+')
+room_data['건축연도'] = room_data['건축연도'].map(lambda x: x if p.search(x) else '0')
+room_data.drop(room_data[room_data['건축연도'].map(lambda x:int(x[:4])) < 1945].index, inplace=True) #해방 전 옛 건물들 제거
+room_data.drop(room_data[room_data['세대수(객실수)']<1].index, inplace=True) #세대수가 0인 것 제거
+room_data['const_year_point'] = 5-(dt.datetime.today().year-room_data['건축연도'].map(lambda x: int(x[:4])))//5
+
+room_data.describe()
+```
+
+- 건물위치가 지번 주소로 되어 있어, folium 지도상에 표현하기 어려우므로 지번 주소를 좌표로 바꾸는 작업을 vworld API를 활용하여 진행
+
+```python
+response = requests.get(f"http://api.vworld.kr/req/address?service=address&request=getCoord&key={key}&address={location}&type=PARCEL")
+    if 'result' in response.json()['response']:
+        x= float(response.json()['response']['result']['point']['x'])
+        y = float(response.json()['response']['result']['point']['y'])
+        arr.append([float(x),float(y)])
+```
+
+- 변환한 좌표를 소수점 세째자리에서 반올림하여, 아주 인접한 원룸의 경우 하나의 그룹으로 묶어 구성함
+
+```python
+f = open('./loc.txt', 'r')
+lines = f.readlines()
+map1 = folium.Map(location=[35.83001,127.125001], zoom_start=13)
+arr = []
+for line in lines:
+    lat,long = map(float, line.split(','))
+    lat = round(lat,2)
+    long = round(long,2)
+    if [lat,long] not in arr:
+        arr.append([lat,long])
+
+for content in arr:
+    lat,long = content
+    folium.Marker([long, lat], popup=f'{long}-{lat}의 원룸', icon=folium.Icon(color='red',icon='info-sign')).add_to(map1)
+    folium.Circle([long, lat], radius=100, color='#3186cc', fill_color='#3186cc', popup=f'{long}-{lat}의 원룸 반경 100M').add_to(map1)
+    folium.Circle([long, lat], radius=500, color='#ebe134', fill_color='#ebe134', popup=f'{long}-{lat}의 원룸 반경 500m').add_to(map1)
+map1.save('map1.html')
+```
+
+- 만들어진 지도의 유형(파란 원 : 반경 100m, 노란 원 : 반경 500m)
+
+![image-20210408212409626](Readme.assets/image-20210408212409626.png)
+
+# 버스 정류장 및 버스 노선 데이터
+
+- 전주시 공공 API를 활용하여, 전주시에서 운영하는 모든 노선의 버스 정류장의 좌표를 받음
+- 해당 좌표 중, 김제시/완주군 부분은 이번 분석에서 다루지 않을 예정이므로, 전주시 인근의 좌표에 해당하지 않는 정류장은 표시하지 않음
+    - 전주시의 주요 좌표는 [링크](http://www.jeonju.go.kr/index.9is?contentUid=9be517a74f8dee91014f92106ff010c3&subPath=) 에서 확인함
+    - 위 데이터를 토대로 표기한 전주시내의 정류장 데이터는 아래와 같음(빨간 마커 : 원룸 구역 / 녹색 마커 : 버스정류장)
+        - ![image-20210408212808638](Readme.assets/image-20210408212808638.png)
+        - 본 연구에서, 한 개인이 일상적으로 이용할 수 있는 버스정류장까지의 직선거리는 500m 내외로 규정함.
+            - 각 원룸 구역을 기준으로, 반경 500m에 있는 정류장들의 위치를 near_bus_stop으로 정하고 해당 정류장을 오가는 노선 ID의 갯수를 토대로 각 원룸의 전주시내 대중교통 편의성을 측정함.
