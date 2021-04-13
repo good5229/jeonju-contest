@@ -1,0 +1,151 @@
+<meta http-equiv="Content-Type" content="application/vnd.ms-excel; charset=utf-8">
+<table border='0' cellpadding='0' cellspacing='1' width='100%' align='center'>
+	<tr height="100">
+		<td align="center" colspan="10"><u><b>디비리아( http://dbria.kr ) - 2021/04/13 - 슈퍼/마트/편의점 주소록 1/1</b></u>
+
+		
+		<br><font color=red>※ 라이센스 구매전의 자료는 샘플용으로 최근 10개만 표기됩니다.</font><br>		</td>
+	</tr>
+<!-- 
+	<tr height="2">
+		<td align="center" colspan="9" style="border-bottom:1px solid #000;"></td>
+	</tr>
+ -->
+	<tr height="40">
+		<td align="center" width="70">번호</td>
+		<td align="center" width="90">DB수집일</td>
+		<td align="center" width="90">사업자신고일</td>
+		<td align="center" width="80">우편번호</td>
+		<td align="center">주소지</td>
+		<td align="center" width="150">사업자명</td>
+		<td align="center" width="100">전화번호</td>
+		<td align="center" width="150">업종구분</td>
+		<td align="center" width="80">지역1</td>
+		<td align="center" width="80">지역2</td>
+	</tr>
+<!-- 
+	<tr height="2">
+		<td align="center" colspan="9" style="border-top:1px solid #000;"></td>
+	</tr>
+ -->
+	<tr height="30">
+		<td align="center">1</td>
+		<td align="">2021.04.13</td>
+		<td align="center">2021.04.12</td>
+		<td align="center" style='mso-number-format:"\@";'>39571		<td align="">경상북도 김천시 영남대로 1440 (부곡동)</td>
+		<td align="">한국타이어김천판매(주)</td>
+		<td align="center" style='mso-number-format:"\@";'>0544374646</td>
+		<td align="center">배출가스전문정비사업자(확인검사대행자)|자동차 타이어 및 튜브 판매업</td>
+		<td align="center">경상북도</td>
+		<td align="center">김천시</td>
+	</tr>
+
+	<tr height="30">
+		<td align="center">2</td>
+		<td align="">2021.04.13</td>
+		<td align="center">2021.04.12</td>
+		<td align="center" style='mso-number-format:"\@";'>33449		<td align="">충청남도 보령시 남대천로 50, 대천농협하나로마트 (대천동)</td>
+		<td align="">(주)와이에이비커머스</td>
+		<td align="center" style='mso-number-format:"\@";'>07078118500</td>
+		<td align="center">제조업|즉석식품제조</td>
+		<td align="center">충청남도</td>
+		<td align="center">보령시</td>
+	</tr>
+
+	<tr height="30">
+		<td align="center">3</td>
+		<td align="">2021.04.13</td>
+		<td align="center">2021.04.12</td>
+		<td align="center" style='mso-number-format:"\@";'>08590		<td align="">서울특별시 금천구 가산디지털1로 84, 에이스하이엔드타워8차 4층 401호 (가산동)</td>
+		<td align="">㈜아이제이일렉트론</td>
+		<td align="center" style='mso-number-format:"\@";'>0261233391</td>
+		<td align="center">통신판매업|기타</td>
+		<td align="center">서울특별시</td>
+		<td align="center">금천구</td>
+	</tr>
+
+	<tr height="30">
+		<td align="center">4</td>
+		<td align="">2021.04.13</td>
+		<td align="center">2021.04.12</td>
+		<td align="center" style='mso-number-format:"\@";'>08506		<td align="">서울특별시 금천구 가산디지털1로 145, 에이스하이엔드타워3차 11층 1104호 (가산동)</td>
+		<td align="">주식회사 솔루게이트</td>
+		<td align="center" style='mso-number-format:"\@";'>07088825252</td>
+		<td align="center">통신판매업|기타</td>
+		<td align="center">서울특별시</td>
+		<td align="center">금천구</td>
+	</tr>
+
+	<tr height="30">
+		<td align="center">5</td>
+		<td align="">2021.04.13</td>
+		<td align="center">2021.04.12</td>
+		<td align="center" style='mso-number-format:"\@";'>08547		<td align="">서울특별시 금천구 독산로108길 25, 201호 (독산동)</td>
+		<td align="">펀데이코리아</td>
+		<td align="center" style='mso-number-format:"\@";'>0230165459</td>
+		<td align="center">통신판매업|기타</td>
+		<td align="center">서울특별시</td>
+		<td align="center">금천구</td>
+	</tr>
+
+	<tr height="30">
+		<td align="center">6</td>
+		<td align="">2021.04.13</td>
+		<td align="center">2021.04.12</td>
+		<td align="center" style='mso-number-format:"\@";'>33446		<td align="">충청남도 보령시 주교면 보령북로 333-53, 1층</td>
+		<td align="">합자회사 보령건설</td>
+		<td align="center" style='mso-number-format:"\@";'>0419359317</td>
+		<td align="center">급수공사대행업</td>
+		<td align="center">충청남도</td>
+		<td align="center">보령시</td>
+	</tr>
+
+	<tr height="30">
+		<td align="center">7</td>
+		<td align="">2021.04.13</td>
+		<td align="center">2021.04.10</td>
+		<td align="center" style='mso-number-format:"\@";'>29014		<td align="">충청북도 옥천군 청산면 판수길 210</td>
+		<td align="">(주)하나그린</td>
+		<td align="center" style='mso-number-format:"\@";'>0437318859</td>
+		<td align="center">건설폐기물처리업</td>
+		<td align="center">충청북도</td>
+		<td align="center">옥천군</td>
+	</tr>
+
+	<tr height="30">
+		<td align="center">8</td>
+		<td align="">2021.04.13</td>
+		<td align="center">2021.04.10</td>
+		<td align="center" style='mso-number-format:"\@";'>25347		<td align="">강원도 평창군 대관령면 오리골길 86-12</td>
+		<td align="">대관령산업(주)</td>
+		<td align="center" style='mso-number-format:"\@";'>0333351338</td>
+		<td align="center">건설폐기물처리업</td>
+		<td align="center">강원도</td>
+		<td align="center">평창군</td>
+	</tr>
+
+	<tr height="30">
+		<td align="center">9</td>
+		<td align="">2021.04.13</td>
+		<td align="center">2021.04.10</td>
+		<td align="center" style='mso-number-format:"\@";'>22766		<td align="">인천광역시 서구 보석로18번안길 22, 2동 201호 (청라동)</td>
+		<td align="">주식회사 스마트진</td>
+		<td align="center" style='mso-number-format:"\@";'>0325784777</td>
+		<td align="center">통신판매업|레져/여행/공연</td>
+		<td align="center">인천광역시</td>
+		<td align="center">서구</td>
+	</tr>
+
+	<tr height="30">
+		<td align="center">10</td>
+		<td align="">2021.04.13</td>
+		<td align="center">2021.04.10</td>
+		<td align="center" style='mso-number-format:"\@";'>17045		<td align="">경기도 용인시 처인구 낙은로50번길 9-16, (숲속마을주택) 201동 101호 (역북동)</td>
+		<td align="">디자인 벗</td>
+		<td align="center" style='mso-number-format:"\@";'>07042224923</td>
+		<td align="center">통신판매업|기타</td>
+		<td align="center">경기도</td>
+		<td align="center">용인시</td>
+	</tr>
+
+	</table>

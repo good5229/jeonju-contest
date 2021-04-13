@@ -139,3 +139,11 @@ map1.save('map1.html')
     - 계산된 값을 거주지 마커 팝업에 표기
 
 ![0412](Readme.assets/0412.PNG)
+
+# 상권 데이터
+
+## 편의점
+
+- 데이터 출처 : [링크](https://data-on.co.kr/search?keyword=%EC%A0%84%EA%B5%AD%20%ED%8E%B8%EC%9D%98%EC%A0%90%20%EC%A3%BC%EC%86%8C%20%EC%A2%8C%ED%91%9C&id=1268)
+- 원룸 좌표를 기준으로 반경 500m 이내 편의점의 좌표가 몇 개나 포함되는지 확인
+- ![image-20210413173442931](Readme.assets/image-20210413173442931.png)
