@@ -380,7 +380,7 @@ total_df_normal['result_normalize'] = (total_df_normal['result'] - min(total_df_
 - 지금껏 정리한 데이터들의 raw값과, 표준화된 값을 가져온다.
 - raw값들은 포인트들의 iframe에 삽입되는 해당 지역의 실제 지표값에 사용된다.
 
-![스크린샷 2021-05-17 오전 12.41.12](Readme.assets/스크린샷 2021-05-17 오전 12.41.12.png)
+    ![스크린샷 2021-05-17 오전 12.41.12](Readme.assets/raw_data_visualize.png)
 
 - raw값과 설문데이터에서의 유저 선호도를 종합하여 아래의 수식에 의거해서 값을 계산한다.
 
